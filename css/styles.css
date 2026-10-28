@@ -1,0 +1,53 @@
+:root{--bg:#edf3f8;--panel:#fff;--ink:#172a46;--muted:#718198;--line:#d8e2ed;--accent:#2463a5;--accent-2:#5e9fe1;--soft:#edf5ff;box-sizing:border-box}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;background:var(--bg);color:var(--ink);font:400 13px/1.45 "DM Sans","Segoe UI",sans-serif}
+.app-sidebar{width:318px;flex:none;background:rgba(255,255,255,.96);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:12px;padding:20px;overflow:auto;position:relative}
+.app-sidebar:after{content:"";position:absolute;inset:0;pointer-events:none;background:url("../assets/dbe-logo.svg") no-repeat 50% 49%;background-size:230px;opacity:.01}
+.app-sidebar>*{position:relative;z-index:1}
+.brand-lockup{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.brand-lockup img{width:44px;height:44px}
+.brand-lockup strong{display:block;font:700 22px/1 "Space Grotesk",sans-serif;letter-spacing:.08em}
+.brand-lockup small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+h2{font:700 11px/1 "Space Grotesk",sans-serif;margin:8px 0 0;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:2px 0 5px}
+.form-control,select,input{font:inherit;color:var(--ink);border-color:var(--line);border-radius:8px}
+.form-control:focus,select:focus,input:focus{border-color:var(--accent-2);box-shadow:0 0 0 .2rem rgba(36,99,165,.12)}
+.toolbar-actions{display:flex;gap:7px}
+.toolbar-actions>*{flex:1}
+.btn{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:8px}
+.btn-primary{background:var(--accent);border-color:var(--accent)}
+.btn-primary:hover{background:#1b5089;border-color:#1b5089}
+.workspace-note{display:flex;gap:8px;padding:10px;border:1px solid #cfe2f5;border-radius:9px;background:var(--soft);color:#4d6784;font-size:11px}
+.workspace-note i{color:var(--accent);font-size:16px}
+#list{display:flex;flex-direction:column;gap:5px;min-height:60px}
+.it{display:flex;align-items:center;gap:8px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:#fff;transition:.15s ease}
+.it:hover{border-color:#a9c7e4;background:var(--soft);transform:translateX(1px)}
+.it b{font-weight:600}.it small{display:block;color:var(--muted);font-size:10px}
+.it .x{margin-left:auto;padding:2px 6px;border:0;background:transparent;color:var(--muted)}
+.it .x:hover{color:#bf3e4b;background:#fff0f1}
+.em{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.sidebar-footer{margin-top:auto;color:var(--muted);font-size:10px;display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+.sidebar-footer a{color:var(--accent);text-decoration:none}
+main{flex:1;position:relative;min-width:0;min-height:0}
+svg#sv{width:100%;height:100%;display:block;background-color:#fbfdff;touch-action:none;background-image:radial-gradient(#b8c8d8 1.1px,transparent 1.4px);background-size:22px 22px}
+#hint{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);color:#8494a8;text-align:center;pointer-events:none;text-transform:uppercase;letter-spacing:.08em;font:600 12px/1.8 "Space Grotesk",sans-serif}
+#hint small{font:400 11px "DM Sans",sans-serif;text-transform:none;letter-spacing:0}
+.zc{position:absolute;right:18px;bottom:18px;display:flex;gap:3px;align-items:center;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:10px;padding:5px;box-shadow:0 8px 24px rgba(32,62,92,.08)}
+.zc button{border:0;background:transparent;color:var(--ink);width:30px;height:28px;border-radius:6px}.zc button:hover{background:var(--soft)}
+.zc span{min-width:46px;text-align:center;color:var(--muted);font-size:11px;font-weight:700}
+.ovl{position:fixed;inset:0;background:rgba(15,35,58,.42);display:flex;align-items:center;justify-content:center;z-index:20;backdrop-filter:blur(3px)}
+.ovl[hidden],#cm[hidden],#toast[hidden]{display:none}
+.box{background:var(--panel);border-radius:14px;padding:24px;width:min(510px,94vw);max-height:90vh;overflow:auto;box-shadow:0 20px 70px rgba(18,43,73,.22)}
+.box h3{margin:0 0 16px;font:700 21px "Space Grotesk",sans-serif;letter-spacing:.01em}
+.nm{width:100%;border:2px solid var(--accent);border-radius:8px;padding:8px 10px}
+.box table{width:100%;border-collapse:collapse;margin:15px 0 7px}.box th{font-weight:700;font-size:11px;text-transform:uppercase;border:1px solid var(--line);padding:7px 8px;color:var(--muted)}.box td{border:1px solid var(--line);padding:0 6px}.box td input[type=text]{width:100%;box-sizing:border-box;border:0;border-radius:0;padding:8px 2px;background:none}
+.c{text-align:center}.c button{border:0;padding:3px 6px;font-size:15px;color:var(--accent);background:transparent}.c small{color:var(--muted)}
+.lk{border:0;padding:4px 0;font-size:13px;background:transparent;color:var(--accent)}
+.g2{display:grid;grid-template-columns:1fr 100px;gap:7px}.g2 select{width:100%;box-sizing:border-box;padding:8px}
+.box label.ck{display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:var(--ink)}.box select,.box #ts2{width:100%;box-sizing:border-box;padding:8px}
+.bt{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}.bt button{border:0;border-radius:8px;padding:8px 14px;font-weight:700}.bt .no{background:#fff0f1;color:#b43d48}.bt .ok{background:var(--accent);color:#fff}
+#cm{position:fixed;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.16);z-index:30;min-width:180px;overflow:hidden;padding:4px}
+#cm button{display:block;width:100%;text-align:left;border:0;border-radius:5px;background:transparent;padding:8px 10px;font-size:12px}#cm button:hover{background:var(--soft)}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 15px;border-radius:8px;z-index:40;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:700px){body{flex-direction:column}.app-sidebar{width:auto;max-height:47vh;border-right:0;border-bottom:1px solid var(--line);padding:14px}.sidebar-footer{display:none}.app-sidebar:after{display:none}}
